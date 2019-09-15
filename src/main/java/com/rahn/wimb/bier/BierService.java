@@ -15,11 +15,12 @@ public class BierService {
         this.bierRepository = bierRepository;
     }
 
-    public Bier save(Bier b) {
-        return this.bierRepository.save(b);
+    public Bier save(String name, BierType type) {
+        return this.bierRepository.save(new Bier(name, type));
     }
 
     public List<Bier> findAll() {
         return this.bierRepository.findAll();
     }
+
 }

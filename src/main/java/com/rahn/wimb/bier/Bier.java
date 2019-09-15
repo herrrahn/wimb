@@ -14,9 +14,34 @@ public class Bier {
 
     private BierType type;
 
-    public Bier(UUID uuid, String name, BierType type) {
-        this.uuid = uuid;
+    public Bier(String name, BierType type) {
         this.name = name;
+        this.type = type;
+    }
+
+    public Bier() {}
+
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BierType getType() {
+        return type;
+    }
+
+    public void setType(BierType type) {
         this.type = type;
     }
 }

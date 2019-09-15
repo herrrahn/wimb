@@ -23,12 +23,12 @@ public class BierServiceTest {
 
     @Test
     public void save() {
-        Bier b = new Bier(UUID.randomUUID(), "Augustiner", BierType.HELLES);
+        Bier b = new Bier("Augustiner", BierType.HELLES);
 
-        this.bierService.save(b);
+        this.bierService.save("Augustiner", BierType.HELLES);
 
         doReturn(b).when(bierRepositoryMock).save(b);
-        verify(bierRepositoryMock).save(b);
+        verify(bierRepositoryMock).save(any(Bier.class));
     }
 
     @Test
